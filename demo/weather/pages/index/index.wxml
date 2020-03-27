@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="header">
+    <picker bindchange="changeRegin" mode = "region" value="{{region}}">
+      <view class="tui-picker-detail">当前城市：{{region[0]}} - {{region[1]}} - {{region[2]}}</view>
+    </picker>
+  </view>
+<view class="container">
+  <view class="temp">{{temperature}}℃ {{cond_txt}}</view>
+  <image class="img" src="../../weather_icon/weather/{{cond_code}}.png"></image>
+ </view>
+ <view class="bottom">
+  <view class="box">
+    <view>温度</view>
+    <view>{{temperature}}</view>
+  </view>
+  <view class="box">
+    <view>气压</view>
+    <view>{{pres}}hpa</view>
+  </view>
+  <view class="box">
+    <view>能见度</view>
+    <view>{{vis}}km</view>
+  </view>
+ </view>
+ <view class="bottom">
+ <view class="box">
+    <view>风向</view>
+    <view>{{wind_dir}}</view>
+  </view>
+  <view class="box">
+    <view>风速</view>
+    <view>{{wind_spd}}km/h</view>
+  </view>
+  <view class="box">
+    <view>风力</view>
+    <view>{{wind_sc}}级</view>
+  </view>
+  </view>
